@@ -47,6 +47,7 @@ export const Theme = {
   drawer: {
     width: 250,
     marginTop: 64,
+    paddingBottom: 64
   },
   card: {
     padding: 10,
