@@ -1,26 +1,25 @@
 import React, { PropTypes } from 'react'
 
+import * as C from '../constants'
+import {Card, CardMedia, CardTitle, CardText} from 'material-ui/Card'
+
 const Event = ({ name, dateBegin, dateEnd, description, tags, photo }) =>
-  <div className='Event'>
-    <h3>{name}</h3>
-    <div className='times'>
-      <p>Begins: {dateBegin}</p>
-      <p>Ends: {dateEnd}</p>
-    </div>
-    <p className='description'>
+  <Card style={C.Theme.card}>
+    {photo ?
+      <CardMedia
+        overlay={<CardTitle title={name} subtitle={dateBegin + '-' + dateEnd} />}
+      >
+        <img src={photo || null} />
+      </CardMedia>
+    :
+      <CardTitle title={name} subtitle={dateBegin + '-' + dateEnd} />
+    }
+    <CardText>
       {description}
-    </p>
-    <div className='tags'>
-      <span className='tags-header'>Tags</span>
-      <ul>
-        {tags.length
-          ? tags.map((t, i) => <li key={i}>{t}</li>)
-          : <li>Untagged</li>
-        }
-      </ul>
-    </div>
-    <img src={photo || null} />
-  </div>
+      <hr />
+      {tags}
+    </CardText>
+  </Card>
 
 const propTypes = {
   name: PropTypes.string.isRequired,
