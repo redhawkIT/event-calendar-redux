@@ -1,3 +1,15 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.completed-task {
+  text-decoration: line-through;
+}
+
+
+/*
 body {
   background: lavender;
   font-family: Helvetica, Arial, sans-serif;
@@ -29,3 +41,4 @@ body {
     }
   }
 }
+*/

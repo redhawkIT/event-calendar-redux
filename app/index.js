@@ -1,3 +1,5 @@
+import * as C from './constants'
+
 import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
@@ -6,8 +8,6 @@ import { createStore } from 'redux'
 // Soft dependancy for Material-UI, mobile responsiveness injection
 import injectTapEventPlugin from 'react-tap-event-plugin'
 injectTapEventPlugin()
-
-import * as C from './constants'
 
 //    /////
 //    MATERIAL-UI THEME SETUP
