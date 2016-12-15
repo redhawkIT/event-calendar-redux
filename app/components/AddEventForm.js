@@ -4,6 +4,13 @@ import { Field, reduxForm } from 'redux-form'
 import * as C from '../constants'
 
 import {Card, CardHeader, CardText} from 'material-ui/Card'
+import {
+  Checkbox,
+  RadioButtonGroup,
+  SelectField,
+  TextField,
+  Toggle
+} from 'redux-form-material-ui'
 
 const AddEventForm = ({ handleSubmit }) =>
   <Card style={C.Theme.card}>
@@ -11,10 +18,7 @@ const AddEventForm = ({ handleSubmit }) =>
     <CardText>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>Event Name</label>
-          <div>
-            <Field name='name' component='input' type='text' placeholder='Event Name' />
-          </div>
+          <Field name='name' component={TextField} hintText='Event Name' />
         </div>
         <div>
           <label>Event Description</label>
