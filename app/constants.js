@@ -12,8 +12,9 @@ import {fade} from 'material-ui/utils/colorManipulator'
 import spacing from 'material-ui/styles/spacing'
 import {
   blueGrey800, blueGrey900, grey400,
-  cyan500, cyan800, cyan400,
   blueGrey600,
+  cyan500, cyan800, cyan400,
+  blueGrey300,
   fullWhite
 } from 'material-ui/styles/colors'
 
@@ -32,7 +33,7 @@ export const Theme = {
     secondaryTextColor: fade(fullWhite, 0.7),
     alternateTextColor: fullWhite,
 
-    canvasColor: blueGrey600,
+    canvasColor: blueGrey300,
     borderColor: fade(fullWhite, 0.3),
 
     disabledColor: fade(fullWhite, 0.3),
@@ -46,10 +47,10 @@ export const Theme = {
   drawer: {
     width: 250,
     marginTop: 64,
-    color: grey400
   },
   card: {
     padding: 10,
-    margin: 10
+    margin: 10,
+    backgroundColor: blueGrey600
   }
 }

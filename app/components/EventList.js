@@ -1,15 +1,21 @@
 import React, { PropTypes } from 'react'
+
+import {Container} from 'react-grid-system'
+import Paper from 'material-ui/Paper'
+
 import Event from './Event'
 
 const EventList = ({ events }) =>
-  <main className='EventList'>
-    {events.map((event) =>
-      <Event
-        key={event.id}
-        {...event}
-      />
-    )}
-  </main>
+  <Container>
+    <Paper>
+      {events.map((event) =>
+        <Event
+          key={event.id}
+          {...event}
+        />
+      )}
+    </Paper>
+  </Container>
 
 const propTypes = {
   events: PropTypes.arrayOf(PropTypes.shape({

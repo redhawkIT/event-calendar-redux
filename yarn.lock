@@ -3771,6 +3771,13 @@ react-event-listener@^0.4.0:
     react-addons-shallow-compare "^0.14.0 || ^15.0.0"
     warning "^3.0.0"
 
+react-grid-system@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/react-grid-system/-/react-grid-system-2.1.0.tgz#67520e1f8299fd2ab55554485d0ed0187f949714"
+  dependencies:
+    lodash "^4.17.2"
+    react "^15.4.0"
+
 react-proxy@^1.1.7:
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/react-proxy/-/react-proxy-1.1.8.tgz#9dbfd9d927528c3aa9f444e4558c37830ab8c26a"
@@ -3804,7 +3811,7 @@ react-transform-hmr@^1.0.3:
     global "^4.3.0"
     react-proxy "^1.1.7"
 
-react@^15.4.1:
+react@^15.4.0, react@^15.4.1:
   version "15.4.1"
   resolved "https://registry.yarnpkg.com/react/-/react-15.4.1.tgz#498e918602677a3983cd0fd206dfe700389a0dd6"
   dependencies:
