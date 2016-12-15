@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 
 import * as C from '../constants'
-import {Card, CardMedia, CardTitle, CardText} from 'material-ui/Card'
+import {Card, CardMedia, CardTitle, CardHeader, CardText} from 'material-ui/Card'
 
 const Event = ({ name, dateBegin, dateEnd, description, tags, photo }) =>
   <Card style={C.Theme.card}>
@@ -14,10 +14,11 @@ const Event = ({ name, dateBegin, dateEnd, description, tags, photo }) =>
     :
       <CardTitle title={name} subtitle={dateBegin + '-' + dateEnd} />
     }
+    {tags &&
+      <CardHeader subtitle={tags} />
+    }
     <CardText>
       {description}
-      <hr />
-      {tags}
     </CardText>
   </Card>
 
