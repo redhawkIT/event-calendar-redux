@@ -3,10 +3,10 @@ import { reducer as formReducer } from 'redux-form'
 import events from './events'
 import visibilityFilter from './visibilityFilter'
 
-const eventsCalendar = combineReducers({
+const rootReducer = combineReducers({
   form: formReducer,
   events,
   visibilityFilter
 })
 
-export default eventsCalendar
+export default rootReducer

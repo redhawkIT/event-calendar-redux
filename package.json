@@ -17,9 +17,11 @@
     "test:tdd": "npm run test -- --auto-watch --no-single-run"
   },
   "dependencies": {
+    "material-ui": "^0.16.5",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-redux": "^4.4.6",
+    "react-tap-event-plugin": "latest",
     "redux": "^3.6.0",
     "redux-form": "^6.3.2",
     "uuid": "^3.0.1"

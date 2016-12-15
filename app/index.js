@@ -2,13 +2,29 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
-import eventsCalendar from './reducers'
+
+// Soft dependancy for Material-UI, mobile responsiveness injection
+import injectTapEventPlugin from 'react-tap-event-plugin'
+injectTapEventPlugin()
+
+import * as C from './constants'
+
+//    /////
+//    MATERIAL-UI THEME SETUP
+//    /////
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import getMuiTheme from 'material-ui/styles/getMuiTheme'
+const materialUITheme = getMuiTheme(C.Theme)
+
+import rootReducer from './reducers'
 import App from './components/App'
 
-const store = createStore(eventsCalendar, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 const wrappedApp = (
   <Provider store={store}>
-    <App />
+    <MuiThemeProvider muiTheme={materialUITheme}>
+      <App />
+    </MuiThemeProvider>
   </Provider>
 )
 
