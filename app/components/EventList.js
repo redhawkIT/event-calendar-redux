@@ -21,8 +21,8 @@ const propTypes = {
   events: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    dateBegin: PropTypes.string.isRequired,
-    dateEnd: PropTypes.string.isRequired,
+    // dateBegin: PropTypes.string.isRequired,
+    // dateEnd: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     tags: PropTypes.array,
     photo: PropTypes.string

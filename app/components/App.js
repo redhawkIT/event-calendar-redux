@@ -17,8 +17,6 @@ import Drawer from 'material-ui/Drawer'
 import AddEvent from '../containers/AddEvent'
 import VisibleEventList from '../containers/VisibleEventList'
 
-import MaterialUIForm from './MaterialUIForm'
-
 //    /////
 //    COMPONENT
 //    /////
@@ -62,7 +60,6 @@ class App extends React.Component {
           containerStyle={C.Theme.drawer}
         >
           <AddEvent />
-          <MaterialUIForm />
         </Drawer>
 
         <AppBar

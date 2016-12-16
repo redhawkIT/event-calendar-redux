@@ -24,8 +24,8 @@ const Event = ({ name, dateBegin, dateEnd, description, tags, photo }) =>
 
 const propTypes = {
   name: PropTypes.string.isRequired,
-  dateBegin: PropTypes.string.isRequired,
-  dateEnd: PropTypes.string.isRequired,
+  // dateBegin: PropTypes.string.isRequired,
+  // dateEnd: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   tags: PropTypes.array,
   photo: PropTypes.string
