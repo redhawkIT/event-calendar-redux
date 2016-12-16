@@ -18,6 +18,8 @@ import {
   fullWhite
 } from 'material-ui/styles/colors'
 
+export const styleAsTrue = true
+
 export const Theme = {
   spacing: spacing,
   fontFamily: 'Roboto, sans-serif',

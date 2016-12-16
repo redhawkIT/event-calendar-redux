@@ -5,11 +5,8 @@ import * as C from '../constants'
 
 import {Card, CardHeader, CardText} from 'material-ui/Card'
 import {
-  Checkbox,
-  RadioButtonGroup,
-  SelectField,
-  TextField,
-  Toggle
+  DatePicker,
+  TextField
 } from 'redux-form-material-ui'
 
 const AddEventForm = ({ handleSubmit }) =>
@@ -18,37 +15,44 @@ const AddEventForm = ({ handleSubmit }) =>
     <CardText>
       <form onSubmit={handleSubmit}>
         <div>
-          <Field name='name' component={TextField} hintText='Event Name' />
+          <Field name='name' component={TextField}
+            hintText='Name'
+            fullWidth={C.styleAsTrue}
+          />
         </div>
         <div>
-          <label>Event Description</label>
-          <div>
-            <Field name='description' component='textarea' type='text' placeholder='Description' />
-          </div>
+          <Field name='description' component={TextField}
+            hintText='Description'
+            fullWidth={C.styleAsTrue}
+            multiLine={C.styleAsTrue}
+            rowsMax={3}
+          />
         </div>
         <div>
-          <label>Start Date/Time</label>
-          <div>
-            <Field name='dateBegin' component='input' type='text' placeholder='Date/Time Start' />
-          </div>
+          <Field name='dateBegin' component={DatePicker}
+            hintText='Begins'
+            fullWidth={C.styleAsTrue}
+            format={null}
+          />
         </div>
         <div>
-          <label>End Date/Time</label>
-          <div>
-            <Field name='dateEnd' component='input' type='text' placeholder='Date/Time End' />
-          </div>
+          <Field name='dateEnd' component={DatePicker}
+            hintText='Ends'
+            fullWidth={C.styleAsTrue}
+            format={null}
+          />
         </div>
         <div>
-          <label>Tags</label>
-          <div>
-            <Field name='tags' component='input' type='text' placeholder='Tags' />
-          </div>
+          <Field name='tags' component={TextField}
+            hintText='Tags'
+            fullWidth={C.styleAsTrue}
+          />
         </div>
         <div>
-          <label>Photo</label>
-          <div>
-            <Field name='photo' component='input' type='text' placeholder='Photo' />
-          </div>
+          <Field name='photo' component={TextField}
+            hintText='Photo'
+            fullWidth={C.styleAsTrue}
+          />
         </div>
         <input type='submit' value='Add Event' />
       </form>
